@@ -1,0 +1,102 @@
+/* HomeManager.module.css */
+
+/* Nội dung chính */
+.head-content {
+  margin: 3px 5px 0 5px;
+  padding-left: 65px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s;
+  height: 100px;
+}
+
+.main-content {
+  margin: 13px 5px 0 267px;
+  padding: 15px;
+  width: 82.3%;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ .head-content {
+  margin-left: 5px;
+}
+
+.sidebar.active ~ .main-content {
+  margin-left: 123.5px;
+}
+
+/* Tiêu đề và nội dung */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Chức năng quản trị */
+.admin-functions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.function-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.function-box:hover {
+  transform: translateY(-5px);
+}
+
+.function-box i {
+  font-size: 40px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.function-box h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.function-box p {
+  color: #666;
+}
+
+.function-box a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.function-box a:hover {
+  color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

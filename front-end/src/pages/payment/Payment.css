@@ -1,0 +1,43 @@
+#embedded-payment-container {
+  width: 350px;
+  position: fixed;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.payment {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.payment-container {
+  position: relative;
+}
+
+.payment .cancel-button {
+  position: fixed;
+  z-index: 10000;
+  top: calc(50% - 180px);
+  left: calc(50% + 180px);
+  transform: translate(-50%, -50%);
+  background: transparent;
+  color: white;
+  border: none;
+  width: fit-content;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.payment .cancel-button:hover {
+  color: white;
+}

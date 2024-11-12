@@ -1,0 +1,86 @@
+.register-form {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 320px;
+  margin: 50px auto;
+}
+
+.register-form h2 {
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  color: #777;
+}
+
+.button-group button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #388e3c;
+}
+
+.button-group button:active {
+  background-color: #2e7d32;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.g_id_signin {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.register-form .radio-group {
+  display: flex;
+  margin-left: 10px !important;
+}
+
+.register-form .radio-group label {
+  display: flex;
+}
+
+.register-form .radio-group label + label {
+  margin-left: 10px;
+}

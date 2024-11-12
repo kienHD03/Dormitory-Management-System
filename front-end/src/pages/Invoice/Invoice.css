@@ -1,0 +1,53 @@
+.invoice {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.invoice .create-btn {
+  display: flex;
+  margin: 0 0 10px auto;
+}
+
+.col-9 .invoice {
+  padding: 0 20px 0 0;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.invoice-table td,
+.invoice-table th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.invoice-nav {
+  display: flex;
+  /* align-items: center; */
+  column-gap: 10px;
+}
+
+.invoice-nav input,
+.invoice-nav select,
+.invoice-nav button {
+  height: 40px;
+  width: fit-content;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 4px;
+}

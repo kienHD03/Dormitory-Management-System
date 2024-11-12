@@ -1,0 +1,421 @@
+/* Tiêu đề và nội dung */
+h1 {
+  font-size: 2rem; /* Kích thước tiêu đề chính lớn hơn */
+  color: #333;
+  margin: 15px 0;
+  text-align: center; /* Canh giữa tiêu đề chính */
+}
+
+h2 {
+  font-size: 1.5rem; /* Kích thước tiêu đề phụ lớn hơn */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Chữ hoa */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+  border-bottom: 2px solid #4caf50; /* Đường viền dưới */
+  padding-bottom: 10px; /* Khoảng cách bên dưới */
+}
+
+p {
+  font-size: 16px; /* Kích thước chữ dễ đọc */
+  color: #555; /* Màu chữ dễ đọc hơn */
+}
+
+.news-manager-section {
+  padding: 20px;
+  max-height: 87vh;
+  overflow-y: auto; /* Thêm thanh cuộn dọc khi nội dung vượt quá chiều cao */
+  border: 1px solid #ddd; /* Thêm đường viền để phân biệt khu vực */
+  border-radius: 8px; /* Bo góc cho khu vực */
+  background-color: #f9f9f9; /* Màu nền nhẹ cho khu vực */
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between; /* Căn giữa các phần tử trong dòng */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.inputGroup button {
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  border: none; /* Xóa đường viền */
+  border-radius: 5px; /* Bo góc */
+  background-color: #28a745; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ khi hover */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  margin-right: 10px; /* Khoảng cách bên phải */
+}
+
+/* Hiệu ứng khi hover */
+.inputGroup button:hover {
+  background-color: #218838; /* Đổi màu nền khi hover */
+}
+
+.inputGroup input {
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền xám */
+  border-radius: 5px; /* Bo góc */
+  margin-right: 10px; /* Khoảng cách bên phải */
+  font-size: 16px; /* Kích thước chữ */
+  width: 250px; /* Đặt chiều rộng cho trường nhập */
+}
+
+/* Thiết lập cho dropdown */
+.inputGroup select {
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền xám */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px; /* Kích thước chữ */
+  background-color: white; /* Màu nền trắng */
+  cursor: pointer; /* Con trỏ khi hover */
+}
+
+/* Hiệu ứng khi hover */
+.inputGroup input:hover,
+.inputGroup select:hover {
+  border-color: #007bff; /* Đổi màu đường viền khi hover */
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none; /* Xóa outline mặc định */
+  border-color: #007bff; /* Đổi màu đường viền khi focus */
+}
+
+/* Nội dung tin tức */
+.news-section {
+  background-color: #f9f9f9; /* Màu nền sáng hơn */
+  padding: 20px; /* Giảm padding */
+  border-radius: 8px; /* Bo góc vừa phải */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 87vh;
+}
+
+.news-content {
+  display: flex; /* Sử dụng flexbox để xếp các mục */
+  flex-wrap: wrap; /* Cho phép các mục xuống dòng khi không đủ chỗ */
+  gap: 15px; /* Khoảng cách giữa các mục */
+  max-height: 77vh; /* Giới hạn chiều cao */
+  overflow-y: auto; /* Tạo thanh cuộn khi cần thiết */
+  border: 1px solid #ddd; /* Đường viền nhạt */
+  border-radius: 5px; /* Bo góc */
+  padding: 10px; /* Khoảng cách bên trong */
+  background-color: #f9f9f9; /* Màu nền */
+}
+
+.news-item {
+  flex: 1 1 calc(50% - 15px); /* Mỗi mục chiếm 50% khung trừ khoảng cách */
+  margin-bottom: 15px; /* Giảm khoảng cách giữa các tin */
+  padding: 10px; /* Giảm không gian */
+  background-color: #ffffff;
+  border: 1px solid #ced4da; /* Đường viền nhạt hơn */
+  border-radius: 8px; /* Bo góc vừa phải */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.news-item:hover {
+  transform: translateY(-3px); /* Nâng thẻ lên nhẹ khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+}
+
+.news-item h2 {
+  font-size: 1.25rem; /* Kích thước font tiêu đề nhỏ hơn */
+  margin: 0; /* Bỏ margin */
+  color: #333; /* Màu chữ tiêu đề */
+  font-weight: bold; /* Làm chữ đậm */
+  text-transform: uppercase; /* Chữ hoa */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+}
+
+.news-item p {
+  font-size: 0.9rem; /* Kích thước font cho nội dung nhỏ hơn */
+  color: #777; /* Màu chữ cho nội dung */
+  margin-top: 5px; /* Khoảng cách giữa tiêu đề và nội dung */
+  line-height: 1.4; /* Tăng khoảng cách giữa các dòng */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Màu khi hover */
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Nội dung chi tiết */
+.detail-view {
+  padding: 20px; /* Giảm padding */
+  background-color: #f9f9f9; /* Màu nền sáng hơn */
+  border-radius: 8px; /* Bo góc vừa phải */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-news{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info-news p {
+  margin: 0;
+  border: 1px solid #ccc; /* Đường viền bên ngoài */
+  border-radius: 5px; /* Bo góc khung */
+  background-color: #f9f9f9; /* Màu nền nhạt cho khung */
+  padding: 10px 15px; /* Giảm padding */
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+}
+
+.news-actions {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các nút */
+  margin-top: 10px; /* Khoảng cách giữa nội dung và nút */
+}
+
+.news-actions button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4caf50; /* Màu xanh dương */
+  color: white;
+  border-radius: 4px; /* Bo góc nhỏ hơn */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.news-actions button:hover {
+  background-color: #0056b3; /* Màu khi hover */
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Lớp mờ xung quanh */
+.overlay {
+  position: fixed; /* Đặt vị trí cố định */
+  top: 0; /* Đặt ở trên cùng */
+  left: 0; /* Đặt ở bên trái */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  height: 100%; /* Chiếm toàn bộ chiều cao */
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
+  z-index: 999; /* Đặt trên các phần tử khác */
+}
+
+/* Khung thêm bài viết */
+.add-news-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 80%; /* Chiều rộng 80% của màn hình */
+  height: 80%; /* Chiều cao 80% của màn hình */
+  max-width: 1000px; /* Giới hạn chiều rộng tối đa */
+  max-height: 700px; /* Giới hạn chiều cao tối đa */
+  overflow: auto;
+}
+
+/* Nút trở về */
+.back-button {
+  padding: 10px 15px; /* Giảm padding */
+  border: none;
+  background-color: #137ae7; /* Màu xanh dương */
+  color: white;
+  border-radius: 4px; /* Bo góc nhỏ hơn */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 15px;
+  display: block; /* Hiển thị dưới dạng khối */
+  text-align: center; /* Canh giữa chữ trong nút */
+}
+
+textarea {
+  width: 100%;
+  min-height: 365px;
+  max-height: 365px;
+}
+
+.selected-input {
+  display: flex;
+  gap: 16px;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.selected-input select {
+  flex: 1;
+  min-width: 150px; /* Ensures each select has a reasonable minimum width */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #d1d9e6;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.selected-input select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.selected-input select:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+
+/* Nút đóng */
+.close-button {
+  padding: 6px 10px; /* Padding cho nút */
+  background-color: #f44336; /* Màu đỏ */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Bỏ viền */
+  border-radius: 4px; /* Bo góc */
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+.news-table th,
+.news-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.news-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.news-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.news-actions button {
+  margin-right: 5px;
+}
+
+.title-column {
+  width: 30%;
+  min-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content-column {
+  width: 40%;
+  min-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name-column {
+  width: 10%;
+  min-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.created-column {
+  width: 10%;
+  min-width: 100px;
+}
+
+.updated-column {
+  width: 10%;
+  min-width: 100px;
+}
+
+.button-view,
+.button-edit,
+.button-delete {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.button-view {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-view:hover {
+  background-color: #0056b3;
+}
+
+.button-edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #e0a800;
+}
+
+.button-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Giảm kích thước tiêu đề chính cho màn hình nhỏ */
+  }
+
+  .news-item {
+    padding: 8px; /* Giảm padding cho màn hình nhỏ */
+    flex: 1 1 100%; /* Mỗi mục chiếm 100% trên màn hình nhỏ */
+  }
+
+  .news-item h2 {
+    font-size: 1.25rem; /* Giảm kích thước font tiêu đề cho màn hình nhỏ */
+  }
+
+  .title-column,
+  .content-column,
+  .name-column,
+  .created-column,
+  .updated-column,
+  .option-column {
+    width: 100%; /* Mỗi cột chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    min-width: 0; /* Xóa chiều rộng tối thiểu */
+  }
+}

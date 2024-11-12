@@ -1,0 +1,209 @@
+/* Phong cách chung */
+.request-manager-section {
+    padding: 20px;
+    max-height: 87vh;
+    overflow-y: auto;
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Màu nền sáng nhẹ */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  }
+  
+  /* Tiêu đề */
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .filter-section {
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử trong dòng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+  }
+  
+  .inputGroup {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  
+  .inputGroup input {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền xám */
+    border-radius: 5px; /* Bo góc */
+    margin-right: 10px; /* Khoảng cách bên phải */
+    font-size: 16px; /* Kích thước chữ */
+  }
+  
+  .inputGroup select {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền xám */
+    border-radius: 5px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    background-color: white; /* Màu nền trắng */
+    cursor: pointer; /* Con trỏ khi hover */
+    margin-right: 10px; /* Khoảng cách bên phải */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .inputGroup input:hover,
+  .inputGroup select:hover {
+    border-color: #007bff; /* Đổi màu đường viền khi hover */
+  }
+  
+  .inputGroup input:focus,
+  .inputGroup select:focus {
+    outline: none; /* Xóa outline mặc định */
+    border-color: #007bff; /* Đổi màu đường viền khi focus */
+  }
+  
+  
+  /* Bảng yêu cầu */
+  .request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .request-table th,
+  .request-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .request-table th {
+    background-color: #4caf50; /* Màu nền tiêu đề */
+    color: white; /* Màu chữ trắng */
+    text-transform: uppercase; /* Chữ hoa */
+    font-weight: bold;
+  }
+  
+  .request-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .request-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Các nút chức năng */
+  .request-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Khoảng cách giữa các nút */
+  }
+  
+  .request-actions button {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button-view {
+    background-color: #007bff; /* Màu xanh xem chi tiết */
+  }
+  
+  .button-view:hover {
+    background-color: #0056b3;
+  }
+  
+  .button-update {
+    background-color: #ffc107; /* Màu vàng cập nhật */
+  }
+  
+  .button-update:hover {
+    background-color: #e0a800;
+  }
+
+  .button-approve.active {
+    background-color: #218838; /* Màu nền khi nút "Đồng ý" sáng */
+    color: #fff;
+  }
+  
+  .button-approve:hover {
+    background-color: #218838; /* Màu nền khi di chuột vào */
+  }
+  
+  .button-reject.active {
+    background-color: #c82333; /* Màu nền khi nút "Từ chối" sáng */
+    color: #fff;
+  }
+  
+  .button-reject:hover {
+    background-color: #c82333; /* Màu nền khi di chuột vào */
+  }
+
+  .detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.detail-table th, .detail-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.detail-table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.detail-table td {
+    text-align: center;
+}
+  
+  
+  /* Nút quay lại */
+  .back-button {
+    margin-top: 20px;
+    padding: 7px 10px;
+    background-color: #137ae7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .request-manager-section {
+      padding: 10px;
+    }
+  
+    .request-actions {
+      flex-direction: column; /* Đặt các nút theo cột trên màn hình nhỏ */
+    }
+  
+    .request-actions button {
+      width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .request-table th,
+    .request-table td {
+      padding: 8px;
+    }
+  }
+  

@@ -1,0 +1,336 @@
+/* Tiêu đề và nội dung */
+h1 {
+    font-size: 2rem; /* Kích thước tiêu đề chính lớn hơn */
+    color: #333;
+    margin: 15px 0;
+    text-align: center; /* Canh giữa tiêu đề chính */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* Kích thước tiêu đề phụ lớn hơn */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Chữ hoa */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+    border-bottom: 2px solid #4caf50; /* Đường viền dưới */
+    padding-bottom: 10px; /* Khoảng cách bên dưới */
+  }
+
+  h3{
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+  
+  p {
+    font-size: 16px; /* Kích thước chữ dễ đọc */
+    color: #555; /* Màu chữ dễ đọc hơn */
+  }
+  
+  .user-admin-section {
+    padding: 20px;
+    max-height: 87vh;
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi nội dung vượt quá chiều cao */
+    border: 1px solid #ddd; /* Đường viền để phân biệt khu vực */
+    border-radius: 8px; /* Bo góc cho khu vực */
+    background-color: #f9f9f9; /* Màu nền nhẹ cho khu vực */
+  }
+  
+  .filter-section {
+    display: flex;
+    justify-content: space-between; /* Căn giữa các phần tử trong dòng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+  }
+  
+  .inputGroup {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  
+  .inputGroup button {
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    border: none; /* Xóa đường viền */
+    border-radius: 5px; /* Bo góc */
+    background-color: #28a745; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+    margin-right: 10px; /* Khoảng cách bên phải */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .inputGroup button:hover {
+    background-color: #218838; /* Đổi màu nền khi hover */
+  }
+  
+  .inputGroup input {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền xám */
+    border-radius: 5px; /* Bo góc */
+    margin-right: 10px; /* Khoảng cách bên phải */
+    font-size: 16px; /* Kích thước chữ */
+    width: 250px; /* Đặt chiều rộng cho trường nhập */
+  }
+  
+  /* Thiết lập cho dropdown */
+  .inputGroup select {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền xám */
+    border-radius: 5px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    background-color: white; /* Màu nền trắng */
+    cursor: pointer; /* Con trỏ khi hover */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .inputGroup input:hover,
+  .inputGroup select:hover {
+    border-color: #007bff; /* Đổi màu đường viền khi hover */
+  }
+  
+  .inputGroup input:focus,
+  .inputGroup select:focus {
+    outline: none; /* Xóa outline mặc định */
+    border-color: #007bff; /* Đổi màu đường viền khi focus */
+  }
+  
+  /* Nội dung người dùng */
+  .user-section {
+    background-color: #f9f9f9; /* Màu nền sáng hơn */
+    padding: 20px; /* Giảm padding */
+    border-radius: 8px; /* Bo góc vừa phải */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-height: 87vh;
+  }
+  
+  .user-content {
+    display: flex; /* Sử dụng flexbox để xếp các mục */
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng khi không đủ chỗ */
+    gap: 15px; /* Khoảng cách giữa các mục */
+    max-height: 77vh; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Tạo thanh cuộn khi cần thiết */
+    border: 1px solid #ddd; /* Đường viền nhạt */
+    border-radius: 5px; /* Bo góc */
+    padding: 10px; /* Khoảng cách bên trong */
+    background-color: #f9f9f9; /* Màu nền */
+  }
+  
+  .user-item {
+    flex: 1 1 calc(50% - 15px); /* Mỗi mục chiếm 50% khung trừ khoảng cách */
+    margin-bottom: 15px; /* Giảm khoảng cách giữa các người dùng */
+    padding: 10px; /* Giảm không gian */
+    background-color: #ffffff;
+    border: 1px solid #ced4da; /* Đường viền nhạt hơn */
+    border-radius: 8px; /* Bo góc vừa phải */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .user-item:hover {
+    transform: translateY(-3px); /* Nâng thẻ lên nhẹ khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+  }
+  
+  .user-item h2 {
+    font-size: 1.25rem; /* Kích thước font tiêu đề nhỏ hơn */
+    margin: 0; /* Bỏ margin */
+    color: #333; /* Màu chữ tiêu đề */
+    font-weight: bold; /* Làm chữ đậm */
+    text-transform: uppercase; /* Chữ hoa */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+  }
+  
+  .user-item p {
+    font-size: 0.9rem; /* Kích thước font cho nội dung nhỏ hơn */
+    color: #777; /* Màu chữ cho nội dung */
+    margin-top: 5px; /* Khoảng cách giữa tiêu đề và nội dung */
+    line-height: 1.4; /* Tăng khoảng cách giữa các dòng */
+  }
+  
+  /* Nút trở về */
+  .back-button {
+    padding: 10px 15px; /* Giảm padding */
+    border: none;
+    background-color: #137ae7; /* Màu xanh dương */
+    color: white;
+    border-radius: 4px; /* Bo góc nhỏ hơn */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 15px;
+    display: block; /* Hiển thị dưới dạng khối */
+    text-align: center; /* Canh giữa chữ trong nút */
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3; /* Màu khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+  }
+  
+  /* Khung thêm người dùng */
+  .add-user-modal {
+    position: fixed; /* Đặt vị trí cố định */
+    top: 50%; /* Giữa màn hình theo chiều dọc */
+    left: 50%; /* Giữa màn hình theo chiều ngang */
+    transform: translate(-50%, -50%); /* Đưa khung về giữa */
+    background-color: white; /* Màu nền trắng */
+    border-radius: 8px; /* Bo góc */
+    padding: 20px; /* Khoảng cách bên trong */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ */
+    z-index: 1000; /* Đặt trên lớp mờ */
+  }
+  
+  /* Nút đóng */
+  .close-button {
+    padding: 6px 10px; /* Padding cho nút */
+    background-color: #f44336; /* Màu đỏ */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Bỏ viền */
+    border-radius: 4px; /* Bo góc */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    margin-bottom: 15px; /* Khoảng cách dưới */
+  }
+  
+  .close-button:hover {
+    background-color: darkred;
+  }
+  
+  /* Bảng người dùng */
+  .user-table {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    border-collapse: collapse; /* Bỏ gạch giữa các ô */
+    margin-top: 20px; /* Khoảng cách phía trên bảng */
+  }
+  
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ccc; /* Đường viền xung quanh ô */
+    padding: 12px; /* Khoảng cách bên trong ô */
+    text-align: left; /* Căn trái cho văn bản */
+    font-size: 16px; /* Kích thước chữ */
+    text-align: center;
+  }
+  
+  .user-table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Màu nền cho hàng chẵn */
+  }
+  
+  .user-table tr:hover {
+    background-color: #e0e0e0; /* Màu nền khi hover */
+  }
+  
+  .button-view,
+.button-edit,
+.button-delete {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.button-view {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-view:hover {
+  background-color: #0056b3;
+}
+
+.button-edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #e0a800;
+}
+
+.button-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #c82333;
+}
+  
+  /* Phân trang */
+  .pagination {
+    display: flex; /* Hiển thị dưới dạng flexbox */
+    justify-content: center; /* Căn giữa */
+    margin-top: 20px; /* Khoảng cách phía trên */
+  }
+  
+  .pagination button {
+    padding: 8px 12px; /* Padding cho nút */
+    border: none; /* Bỏ viền */
+    border-radius: 5px; /* Bo góc */
+    background-color: #28a745; /* Màu nền */
+    color: white; /* Màu chữ trắng */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+  }
+  
+  .pagination button:hover {
+    background-color: #218838; /* Màu khi hover */
+  }
+  
+  .modal {
+      display: flex; /* Để căn giữa modal */
+      justify-content: center; /* Căn giữa theo chiều ngang */
+      align-items: center; /* Căn giữa theo chiều dọc */
+      position: fixed; /* Đặt modal ở vị trí cố định */
+      z-index: 1000; /* Để modal hiển thị trên các phần tử khác */
+      left: 0;
+      top: 0;
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+      height: 100%; /* Chiếm toàn bộ chiều cao */
+      background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+  }
+  
+  .modal-content {
+      background-color: #fff; /* Màu nền của nội dung modal */
+      border-radius: 8px; /* Bo góc cho modal */
+      padding: 20px; /* Khoảng cách bên trong */
+      width: 400px; /* Chiều rộng modal */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng cho modal */
+      position: relative; /* Để có thể định vị close button */
+  }
+  
+  .close {
+      position: absolute; /* Để đặt nút đóng ở góc trên bên phải */
+      top: 10px;
+      right: 15px;
+      font-size: 24px; /* Kích thước chữ cho nút đóng */
+      cursor: pointer; /* Hiển thị con trỏ khi di chuột qua */
+      color: #aaa; /* Màu sắc cho nút đóng */
+  }
+  
+  .close:hover {
+      color: #000; /* Đổi màu khi di chuột qua */
+  }
+  
+  h3 {
+      margin: 0 0 15px; /* Khoảng cách giữa tiêu đề và nội dung */
+  }
+  
+  p {
+      margin: 10px 0; /* Khoảng cách giữa các đoạn văn */
+      line-height: 1.5; /* Khoảng cách giữa các dòng */
+  }
+  
+  

@@ -1,0 +1,177 @@
+/* Tiêu đề và nội dung */
+h1 {
+  font-size: 1.5rem; /* Kích thước tiêu đề chính nhỏ hơn */
+  color: #333;
+  margin: 15px 0;
+  text-align: center; /* Canh giữa tiêu đề chính */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.25rem; /* Kích thước tiêu đề phụ nhỏ hơn */
+  color: #2c3e50; /* Màu sắc ấn tượng cho tiêu đề */
+}
+
+p {
+  font-size: 16px; /* Kích thước chữ nhỏ hơn */
+  color: #555; /* Màu chữ dễ đọc hơn */
+}
+
+/* Nội dung tin tức */
+.news-section {
+  background-color: #f9f9f9; /* Màu nền sáng hơn */
+  padding: 20px; /* Giảm padding */
+  border: 2px solid #ddd;
+  border-radius: 8px; /* Bo góc vừa phải */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 87vh; /* Giới hạn chiều cao của khung */
+  overflow-y: auto; /* Cho phép cuộn theo chiều dọc */
+}
+
+.filter-controls{
+  display: flex;
+  justify-content: center; /* Căn giữa các phần tử trong dòng */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.filterGroup button {
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  border: none; /* Xóa đường viền */
+  border-radius: 5px; /* Bo góc */
+  background-color: #28a745; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ khi hover */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  margin-right: 10px; /* Khoảng cách bên phải */
+}
+
+/* Hiệu ứng khi hover */
+.filterGroup button:hover {
+  background-color: #218838; /* Đổi màu nền khi hover */
+}
+
+.filterGroup input {
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền xám */
+  border-radius: 5px; /* Bo góc */
+  margin-right: 10px; /* Khoảng cách bên phải */
+  font-size: 16px; /* Kích thước chữ */
+  width: 250px; /* Đặt chiều rộng cho trường nhập */
+}
+
+/* Thiết lập cho dropdown */
+.filterGroup select {
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền xám */
+  border-radius: 5px; /* Bo góc */
+  margin-right: 10px;
+  font-size: 16px; /* Kích thước chữ */
+  background-color: white; /* Màu nền trắng */
+  cursor: pointer; /* Con trỏ khi hover */
+}
+
+/* Hiệu ứng khi hover */
+.filterGroup input:hover,
+.filterGroup select:hover {
+  border-color: #007bff; /* Đổi màu đường viền khi hover */
+}
+
+.filterGroup input:focus,
+.filterGroup select:focus {
+  outline: none; /* Xóa outline mặc định */
+  border-color: #007bff; /* Đổi màu đường viền khi focus */
+}
+
+
+.news-content {
+  max-height: 77vh; /* Giới hạn chiều cao */
+  border-radius: 5px; /* Bo góc */
+  padding: 10px; /* Khoảng cách bên trong */
+  background-color: #f9f9f9; /* Màu nền */
+}
+
+.news-item {
+  margin-bottom: 15px; /* Giảm khoảng cách giữa các tin */
+  padding: 10px; /* Giảm không gian */
+  background-color: #ffffff;
+  border: 1px solid #ced4da; /* Đường viền nhạt hơn */
+  border-radius: 8px; /* Bo góc vừa phải */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: pointer; /* Con trỏ chuột khi hover */
+}
+
+.news-item:hover {
+  transform: translateY(-3px); /* Nâng thẻ lên nhẹ khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+}
+
+.news-item h2 {
+  font-size: 1.25rem; /* Kích thước font tiêu đề nhỏ hơn */
+  margin: 0; /* Bỏ margin */
+  color: #333; /* Màu chữ tiêu đề */
+  font-weight: 600; /* Làm chữ đậm */
+}
+
+.news-item p {
+  font-size: 0.9rem; /* Kích thước font cho nội dung nhỏ hơn */
+  color: #777; /* Màu chữ cho nội dung */
+  margin-top: 5px; /* Khoảng cách giữa tiêu đề và nội dung */
+  line-height: 1.4; /* Tăng khoảng cách giữa các dòng */
+}
+
+.news-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nút trở về */
+.back-button {
+  padding: 6px 10px; /* Giảm padding */
+  border: none;
+  background-color: #007bff; /* Màu xanh dương */
+  color: white;
+  border-radius: 4px; /* Bo góc nhỏ hơn */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 15px;
+  display: block; /* Hiển thị dưới dạng khối */
+  text-align: center; /* Canh giữa chữ trong nút */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Màu khi hover */
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Nội dung chi tiết */
+.detail-view {
+  padding: 20px; /* Giảm padding */
+  background-color: #f9f9f9; /* Màu nền sáng hơn */
+  border-radius: 8px; /* Bo góc vừa phải */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem; /* Giảm kích thước tiêu đề chính cho màn hình nhỏ */
+  }
+
+  .news-item {
+    padding: 8px; /* Giảm padding cho màn hình nhỏ */
+  }
+
+  .news-item h2 {
+    font-size: 1rem; /* Giảm kích thước font tiêu đề cho màn hình nhỏ */
+  }
+}

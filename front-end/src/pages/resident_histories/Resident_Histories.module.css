@@ -1,0 +1,72 @@
+/* ResidentHistories.module.css */
+
+.historiesContainer {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  max-height: 87vh;
+  overflow-y: auto; /* Thêm cuộn nếu nội dung quá dài */
+}
+
+.currentResidence {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.currentResidence h2 {
+  margin-top: 0;
+  color: #343a40; /* Màu tiêu đề */
+}
+
+.currentResidence p {
+  margin: 5px 0;
+  color: #495057; /* Màu văn bản */
+  font-size: 16px;
+}
+
+.historiesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historiesTable th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.historiesTable td,
+.historiesTable th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .historiesContainer {
+    padding: 15px;
+  }
+
+  .currentResidence {
+    padding: 15px;
+  }
+
+  .historiesTable th,
+  .historiesTable td {
+    padding: 8px;
+  }
+}

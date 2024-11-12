@@ -1,0 +1,36 @@
+.header {
+  padding: 8px 30px; /* Tăng độ padding cho cảm giác rộng rãi hơn */
+  background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+  border: solid 1px #ced4da; /* Màu viền nhẹ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ để tạo chiều sâu */
+  display: flex; /* Sử dụng flexbox cho căn chỉnh */
+  justify-content: space-between; /* Căn giữa nội dung */
+  align-items: center;
+}
+
+.sidebar__toggle-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.sidebar__toggle-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #218838, #28a745);
+}
+
+.sidebar__toggle-btn i {
+  font-size: 20px;
+}
+
+.header__title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}

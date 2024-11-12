@@ -1,0 +1,171 @@
+.profileContainer {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Căn giữa toàn bộ container */
+}
+
+.profileTitle {
+  text-align: center; /* Căn giữa chữ */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  border-bottom: 3px solid #ddd;
+  padding-bottom: 10px;
+  display: block; /* Đảm bảo tiêu đề chiếm toàn bộ chiều ngang */
+  width: 100%; /* Đảm bảo tiêu đề bao phủ toàn bộ vùng ngang */
+}
+
+/* Grid cho thông tin */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.personalInfo,
+.roomInfo {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.personalInfo h2,
+.roomInfo h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.personalInfo p,
+.roomInfo p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Nút Chỉnh sửa */
+.buttonContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.editButton {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px; /* Thêm khoảng cách trên để không sát bảng thông tin */
+}
+
+.editButton:first-child {
+  margin-right: 10px; /* Khoảng cách bên phải cho nút Cập nhật */
+}
+
+.editButton:last-child {
+  margin-left: 10px; /* Khoảng cách bên trái cho nút Đổi mật khẩu */
+}
+
+.editButton:hover {
+  background-color: #45a049;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Bảng chỉnh sửa */
+.editContainer {
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Các trường nhập liệu */
+.editFields {
+  margin-top: 10px;
+}
+
+.editContainer label {
+  display: block;
+  margin: 10px 0;
+}
+
+.editContainer input,
+.editContainer select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Nút Lưu và Hủy */
+.saveButton,
+.cancelButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.saveButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancelButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.cancelButton:hover {
+  background-color: #e53935;
+}
+
+/* Các trường nhập liệu cho đổi mật khẩu */
+.editFields {
+  margin-top: 10px;
+}
+
+.editContainer label {
+  display: block;
+  margin: 10px 0;
+}
+
+.editContainer input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

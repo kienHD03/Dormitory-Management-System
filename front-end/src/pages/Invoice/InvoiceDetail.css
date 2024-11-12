@@ -1,0 +1,41 @@
+.invoice-detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.invoice-detail-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.invoice-detail.close-btn {
+  position: absolute;
+  top: -23px;
+  right: -9px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.invoice-detail.close-btn:hover {
+  color: black;
+}
+
+.invoice-detail-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}

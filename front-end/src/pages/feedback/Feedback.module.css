@@ -1,0 +1,230 @@
+.report-manager-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-height: 87vh;
+    overflow-y: auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section {
+    display: flex;
+    justify-content: space-between; /* Căn giữa các phần tử trong dòng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+  }
+  
+  .inputGroup {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  
+  .inputGroup button {
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    border: none; /* Xóa đường viền */
+    border-radius: 5px; /* Bo góc */
+    background-color: #28a745; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+    margin-right: 10px; /* Khoảng cách bên phải */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .inputGroup button:hover {
+    background-color: #218838; /* Đổi màu nền khi hover */
+  }
+  
+  .inputGroup input {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền xám */
+    border-radius: 5px; /* Bo góc */
+    margin-right: 10px; /* Khoảng cách bên phải */
+    font-size: 16px; /* Kích thước chữ */
+    width: 250px; /* Đặt chiều rộng cho trường nhập */
+  }
+  
+  /* Thiết lập cho dropdown */
+  .inputGroup select {
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền xám */
+    border-radius: 5px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    background-color: white; /* Màu nền trắng */
+    cursor: pointer; /* Con trỏ khi hover */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .inputGroup input:hover,
+  .inputGroup select:hover {
+    border-color: #007bff; /* Đổi màu đường viền khi hover */
+  }
+  
+  .inputGroup input:focus,
+  .inputGroup select:focus {
+    outline: none; /* Xóa outline mặc định */
+    border-color: #007bff; /* Đổi màu đường viền khi focus */
+  }
+  
+  
+  .add-report-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .close-button {
+    padding: 6px 10px; /* Padding cho nút */
+    background-color: #f44336; /* Màu đỏ */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Bỏ viền */
+    border-radius: 4px; /* Bo góc */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    margin-bottom: 15px; /* Khoảng cách dưới */
+  }
+  
+  .close-button:hover {
+    background-color: darkred;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.detail-table th, .detail-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.detail-table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.detail-table td {
+    text-align: center;
+}
+
+
+  .info-report{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .info-report p {
+    margin: 0;
+    border: 1px solid #ccc; /* Đường viền bên ngoài */
+    border-radius: 5px; /* Bo góc khung */
+    background-color: #f9f9f9; /* Màu nền nhạt cho khung */
+    padding: 10px 15px; /* Giảm padding */
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+  }
+  
+  .back-button {
+    padding: 10px 15px; /* Giảm padding */
+    border: none;
+    background-color: #137ae7; /* Màu xanh dương */
+    color: white;
+    border-radius: 4px; /* Bo góc nhỏ hơn */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 15px;
+    display: block; /* Hiển thị dưới dạng khối */
+    text-align: center; /* Canh giữa chữ trong nút */
+  }
+
+  .back-button:hover {
+    background-color: #0056b3; /* Màu khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+  }
+
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .report-table th, .report-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .report-table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .report-table td{
+    text-align: center;
+  }
+  
+  .select {
+    width: 100%; /* Chiều rộng đầy đủ */
+    padding: 10px; /* Khoảng cách bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    background-color: #fff; /* Màu nền */
+    cursor: pointer; /* Con trỏ chuột */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho đường viền */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .select:hover {
+    border-color: #28a745; /* Thay đổi màu đường viền khi hover */
+  }
+  
+  /* Hiệu ứng khi chọn */
+  .select:focus {
+    border-color: #007bff; /* Thay đổi màu đường viền khi chọn */
+    outline: none; /* Tắt outline mặc định */
+  }
+  
+  /* Style cho các option bên trong select */
+  .select option {
+    padding: 10px; /* Khoảng cách cho từng tùy chọn */
+    background-color: #fff; /* Màu nền cho các tùy chọn */
+    color: #333; /* Màu chữ */
+  }
+  
+  /* Thay đổi màu cho option khi hover */
+  .select option:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover vào tùy chọn */
+  }
+  
+  

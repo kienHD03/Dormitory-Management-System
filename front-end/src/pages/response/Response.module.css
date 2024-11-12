@@ -1,0 +1,138 @@
+.request-manager-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  max-height: 87vh;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between; /* Căn giữa các phần tử trong dòng */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.inputGroup button {
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  border: none; /* Xóa đường viền */
+  border-radius: 5px; /* Bo góc */
+  background-color: #28a745; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ khi hover */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  margin-right: 10px; /* Khoảng cách bên phải */
+}
+
+/* Hiệu ứng khi hover */
+.inputGroup button:hover {
+  background-color: #218838; /* Đổi màu nền khi hover */
+}
+
+.inputGroup input {
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền xám */
+  border-radius: 5px; /* Bo góc */
+  margin-right: 10px; /* Khoảng cách bên phải */
+  font-size: 16px; /* Kích thước chữ */
+  width: 250px; /* Đặt chiều rộng cho trường nhập */
+}
+
+/* Thiết lập cho dropdown */
+.inputGroup select {
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền xám */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px; /* Kích thước chữ */
+  background-color: white; /* Màu nền trắng */
+  cursor: pointer; /* Con trỏ khi hover */
+}
+
+/* Hiệu ứng khi hover */
+.inputGroup input:hover,
+.inputGroup select:hover {
+  border-color: #007bff; /* Đổi màu đường viền khi hover */
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none; /* Xóa outline mặc định */
+  border-color: #007bff; /* Đổi màu đường viền khi focus */
+}
+
+
+.add-request-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.close-button {
+  padding: 6px 10px; /* Padding cho nút */
+  background-color: #f44336; /* Màu đỏ */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Bỏ viền */
+  border-radius: 4px; /* Bo góc */
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.request-table th, .request-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.request-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.request-table td{
+  text-align: center
+}
+
+.back-button {
+  margin-top: 20px;
+}

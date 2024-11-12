@@ -1,0 +1,127 @@
+.create-invoice-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.create-invoice-modal {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1001;
+}
+
+/* Modal Header */
+.create-invoice-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* Form Fields */
+.create-invoice-modal .form-group {
+  margin-bottom: 15px;
+}
+
+.create-invoice-modal .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.create-invoice-modal .form-group input,
+.create-invoice-modal .form-group textarea,
+.create-invoice-modal .form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 4px;
+}
+
+/* Modal Buttons */
+.create-invoice-modal button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-invoice-modal .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.create-invoice-modal .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Additional Modal Button Styling */
+.create-invoice-modal .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.create-invoice-modal .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  z-index: 1001;
+}
+
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  width: 90%;
+  z-index: 1001;
+}
+
+.suggestions-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}

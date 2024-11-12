@@ -1,0 +1,109 @@
+/* Nút toggle menu */
+
+
+/* Tiêu đề và nội dung */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  background-color: #4CAF50;
+  border-radius: 8px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.center {
+  text-align: center;
+}
+
+.title{
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Quản lý sinh viên */
+.student-management-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.student-management-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.news-section {
+  flex-grow: 4; /* Chiếm 3 phần */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  max-height: 87vh;
+}
+
+.info-section {
+  flex-grow: 1; /* Chiếm 1 phần */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.news-section,
+.info-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.news-section:hover,
+.info-section:hover {
+  transform: scale(1.02);
+}
+
+.news-header,
+.info-header {
+  
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.news-content,
+.info-content {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.active {
+    left: -200px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}

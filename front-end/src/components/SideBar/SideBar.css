@@ -1,0 +1,72 @@
+.sidebar {
+  flex-direction: column;
+  background: white;
+  border-radius: 0 8px 0 0;
+  height: 100%;
+  padding: 20px; /* Thêm khoảng cách bên trong */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để tạo chiều sâu */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0 20px 0 20px;
+}
+
+.sidebar li {
+  /* background: orange; */
+  border-radius: 8px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+.sidebar a:hover {
+  background: #4caf50;
+  color: white;
+}
+
+.sidebar a.active {
+  color: white;
+  background: #4caf50;
+}
+
+.sidebar a i {
+  width: 20px;
+}
+
+a {
+  color: black;
+}
+
+.logout {
+  text-align: center;
+}
+
+.logout button {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #d9534f;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout button:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+.sidebar ul a.disabled {
+  color: grey;
+  background-color: #ccc;
+  pointer-events: none; /* Vô hiệu hóa mọi hành động trên phần tử */
+  cursor: not-allowed;
+}

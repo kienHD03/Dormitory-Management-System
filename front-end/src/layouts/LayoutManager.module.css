@@ -1,0 +1,213 @@
+/* Nút toggle menu */
+.menu-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #218838, #28a745);
+}
+
+.menu-toggle i {
+  font-size: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 87px;
+  left: 0;
+  width: 250px;
+  height: 85%;
+  background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+  color: #333;
+  padding-top: 5px;
+  transition: 0.3s ease;
+  overflow-y: auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.active {
+  left: -250px;
+}
+
+.sidebar ul {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 5px;
+}
+
+.sidebar ul li a {
+  padding: 8px 13px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a.active {
+  color: white; /* Màu chữ khi được chọn */
+  background-color: #4caf50; /* Màu nền khi được chọn */
+}
+
+.sidebar ul li a:hover {
+  background-color: #4caf50;
+  color: white;
+  transform: translateX(5px);
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+}
+
+/* Nút đăng xuất */
+.logout {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+  left: 25px;
+  text-align: center;
+}
+
+.logout button {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #d9534f;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout button:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+/* Nội dung chính */
+.head-content {
+  height: 70px;
+  line-height: 70px;
+  margin: 3px 5px 0 5px;
+  padding-left: 65px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ .head-content {
+  margin-left: 5px;
+}
+
+.main-content {
+  margin: 13px 5px 0 267px;
+  padding: 10px;
+  width: 82.3%;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ .main-content {
+  margin-left: 123.5px;
+}
+
+/* Tiêu đề và nội dung */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Quản lý sinh viên */
+.student-management-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.news-section {
+  flex-grow: 4; /* Chiếm 3 phần */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.info-section {
+  flex-grow: 1; /* Chiếm 1 phần */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.news-section:hover,
+.info-section:hover {
+  transform: scale(1.02);
+}
+
+.news-header,
+.info-header {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.news-content,
+.info-content {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.active {
+    left: -200px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}

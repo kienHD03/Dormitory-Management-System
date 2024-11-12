@@ -1,0 +1,115 @@
+.home {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin: 0 15px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #007bff;
+  }
+  
+  .loginButton {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .loginButton:hover {
+    background-color: #ff6347;
+  }
+  
+  .main-content {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .hero {
+    background-image: url('./your-image-path.png'); /* Thay thế bằng đường dẫn tới ảnh bạn muốn sử dụng */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .heroTitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .heroSubtitle {
+    font-size: 24px;
+    margin: 10px 0 0;
+  }
+  
+  .cta {
+    margin-top: 30px;
+  }
+  
+  .ctaButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .ctaButton {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .ctaButton:hover {
+    background-color: #ff7f00;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+  }
+  

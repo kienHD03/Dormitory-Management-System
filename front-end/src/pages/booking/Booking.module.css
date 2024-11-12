@@ -1,0 +1,281 @@
+/* Cấu trúc chung cho phần đặt phòng */
+.booking-wrapper {
+  border: 2px solid #ddd; /* Thêm border */
+  padding: 20px; /* Khoảng cách giữa border và nội dung */
+  border-radius: 10px; /* Bo góc mềm mại */
+  max-height: 87vh; /* Giới hạn chiều cao của khung */
+  overflow-y: auto; /* Cho phép cuộn theo chiều dọc */
+  background-color: #f9f9f9; /* Màu nền sáng hơn */
+}
+
+/* Tiêu đề chính và phụ */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  background-color: #4caf50;
+  color: white;
+  padding-top: 10px;
+}
+
+/* Đoạn văn bản */
+.room-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Canh giữa nội dung */
+.center {
+  text-align: center;
+}
+
+/* Danh sách phòng */
+.content-wrapper {
+  background-color: #f9f9f9; /* Màu nền sáng hơn */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiển thị danh sách phòng với layout dạng lưới */
+.room-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Thẻ hiển thị thông tin phòng */
+.room-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: grid;
+  flex-direction: column;
+}
+
+.room-card > * {
+  margin-bottom: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+.room-card:hover {
+  transform: scale(1.05); /* Tăng kích thước khi hover */
+}
+
+/* Phần chứa nút trong thẻ phòng */
+.button-container {
+  margin-top: auto; /* Đẩy phần tử này xuống cuối */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-booking,
+.button-details {
+  border-radius: 8px;
+  padding: 3px;
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hiệu ứng khi hover vào nút đặt phòng */
+.button-booking:hover,
+.button-details:hover {
+  background-color: #c7c7c7;
+  transform: translateY(-2px); /* Di chuyển lên khi hover */
+}
+
+/* Các nút bấm chung */
+.button-container button {
+  margin-right: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Hiệu ứng hover cho các nút */
+.button-container button:hover {
+  background-color: #28a745;
+  transform: translateY(-2px);
+}
+
+/* Modal xem chi tiết và form đặt phòng */
+.detail-modal,
+.confirm-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Nền tối cho modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.detail-content,
+.confirm-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 450px;
+  text-align: left;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Hiệu ứng xuất hiện cho modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content label {
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-content input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+/* Đổi màu viền khi input được focus */
+.form-content input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Các nút trong form */
+.form-content button,
+.close-button,
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.close-button:hover,
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column; /* Đặt chiều dọc cho phần tìm kiếm và các phần tử khác */
+  align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+.booking-section p {
+  margin-bottom: 16px;
+}
+
+.search-container {
+  display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử trong cùng một hàng */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
+  margin-bottom: 20px; /* Khoảng cách dưới phần tìm kiếm */
+}
+
+.search-input {
+  flex: 1; /* Chiếm không gian còn lại */
+  margin-right: 10px; /* Khoảng cách giữa input và select */
+  padding: 10px; /* Padding cho input */
+  border: 1px solid #ccc; /* Đường viền cho input */
+  border-radius: 4px; /* Bo tròn góc */
+}
+
+.building-select {
+  width: 200px; /* Chiều rộng cho dropdown */
+  margin-right: 10px; /* Khoảng cách giữa dropdown và tabs */
+  padding: 10px; /* Padding cho select */
+  border: 1px solid #ccc; /* Đường viền cho select */
+  border-radius: 4px; /* Bo tròn góc */
+}
+
+.tabs {
+  display: flex; /* Sử dụng Flexbox cho các nút tab */
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+button {
+  padding: 10px 15px; /* Padding cho nút */
+  border: 1px solid #ccc; /* Đường viền cho nút */
+  border-radius: 4px; /* Bo tròn góc */
+  cursor: pointer; /* Con trỏ khi di chuột qua nút */
+}
+
+.active-tab {
+  background-color: #28a745; /* Màu nền cho tab đang hoạt động */
+  color: white; /* Màu chữ cho tab đang hoạt động */
+}
+
+/* Input cho text, số điện thoại và ngày */
+input[type="text"],
+input[type="tel"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.active {
+    left: -200px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .room-card {
+    width: 90%; /* Chiều rộng cho card phòng trên màn hình nhỏ */
+  }
+}
